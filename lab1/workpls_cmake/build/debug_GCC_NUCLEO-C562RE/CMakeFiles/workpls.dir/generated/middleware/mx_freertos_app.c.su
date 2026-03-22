@@ -1,0 +1,11 @@
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:34:13:uart_puts	24	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:41:13:led_on	8	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:45:13:led_off	8	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:50:13:morse_dot	8	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:57:13:morse_dash	8	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:65:20:morse_for_char	16	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:115:13:morse_blink_message	32	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:146:13:morse_to_char	16	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:180:9:app_synctasks_init	24	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:205:13:function1	16	static
+C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware/mx_freertos_app.c:221:13:function2	128	static
