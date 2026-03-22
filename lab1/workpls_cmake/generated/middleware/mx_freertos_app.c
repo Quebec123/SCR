@@ -6,14 +6,14 @@
 #include <string.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <stdio.h>   /* snprintf */
+#include <stdio.h>
 
 /* Private define ------------------------------------------------------------*/
 #define Task1_stack_size  256U
 #define Task2_stack_size  256U
 #define RX_LINE_MAX 64
 
-/* Morse timing (ms) */
+//czasy morsa
 #define MORSE_UNIT_MS            120U
 #define DOT_MS                   (MORSE_UNIT_MS)
 #define DASH_MS                  (3U * MORSE_UNIT_MS)
@@ -30,14 +30,11 @@ static TaskHandle_t Task2_Handle;
 static void function1(void *pvParameters);
 static void function2(void *pvParameters);
 
-/* ---------- UART helpers ---------- */
 static void uart_puts(const char *s)
 {
-  /* NOTE: This assumes husart2 is compatible with HAL_UART_Transmit(). */
   HAL_UART_Transmit(husart2, (uint8_t*)s, (uint16_t)strlen(s), 1000);
 }
-
-/* ---------- LED helpers (your environment uses LL pin states) ---------- */
+//łatwiejsza obsługa ledów
 static void led_on(void)
 {
   HAL_GPIO_WritePin(LD2_PORT, LD2_PIN, LL_GPIO_PIN_SET);
@@ -61,7 +58,7 @@ static void morse_dash(void)
   led_off();
   vTaskDelay(pdMS_TO_TICKS(INTRA_ELEMENT_GAP_MS));
 }
-
+//look up table
 static const char *morse_for_char(char c)
 {
   if (c >= 'a' && c <= 'z') c = (char)(c - 'a' + 'A');
@@ -106,12 +103,13 @@ static const char *morse_for_char(char c)
     case '8': return "---..";
     case '9': return "----.";
 
-    case ' ': return " "; /* word gap marker */
+    case ' ': return " ";
 
     default:  return NULL;
   }
 }
 
+//odpowiednie opóżźnienia by dobrze mrugać morsem
 static void morse_blink_message(const char *msg)
 {
   for (size_t i = 0; msg[i] != '\0'; i++)
@@ -136,13 +134,11 @@ static void morse_blink_message(const char *msg)
       else if (pat[j] == '-') morse_dash();
     }
 
-    /* We already waited 1 unit after last dot/dash.
-       Convert to 3-unit letter gap total. */
+
     vTaskDelay(pdMS_TO_TICKS(LETTER_GAP_MS - INTRA_ELEMENT_GAP_MS));
   }
 }
-
-/* Reverse lookup: pattern -> character */
+//look up table
 static char morse_to_char(const char *pat)
 {
   if (strcmp(pat, ".-") == 0)   return 'A';
@@ -187,11 +183,10 @@ int32_t app_synctasks_init (void)
     return -1;
   }
 
-  /* Decoder task higher priority than blinker */
   ret = xTaskCreate(function1, "Task1", Task1_stack_size,
                     (void*)NULL, 1, &Task1_Handle);
   ret = xTaskCreate(function2, "Task2", Task2_stack_size,
-                    (void*)NULL, 2, &Task2_Handle);
+                    (void*)NULL, 2, &Task2_Handle); //musi być wyższy piorytet
 
   if (ret != pdPASS)
   {
@@ -200,8 +195,7 @@ int32_t app_synctasks_init (void)
 
   return 0;
 }
-
-/* Task1 = transmitter: blink SOS forever */
+//ciągłe nadawanie na diodzie, jest zrobion "zwaercie" by przesłać sygnały na drugi pin
 static void function1(void *pvParameters)
 {
   (void)pvParameters;
@@ -212,18 +206,16 @@ static void function1(void *pvParameters)
   {
     morse_blink_message("SOS");
 
-    /* Gap between repeats */
     vTaskDelay(pdMS_TO_TICKS(WORD_GAP_MS + 1000U));
   }
 }
-
-/* Task2 = receiver: decode INPUT pin (shorted to LD2 output) */
+//dekodowanie morsa i wypisanie na serialporcie
 static void function2(void *pvParameters)
 {
   (void)pvParameters;
 
   uart_puts("RX: decoding from INPUT pin\r\n");
-
+//tablica do zachowania słowa
   char pat[8];
   uint32_t pat_len = 0;
 
@@ -238,30 +230,30 @@ static void function2(void *pvParameters)
     if (cur != prev)
     {
       TickType_t now = xTaskGetTickCount();
-      uint32_t dt_ms = (uint32_t)((now - last_edge) * portTICK_PERIOD_MS);
+      uint32_t dt_ms = (uint32_t)((now - last_edge) * portTICK_PERIOD_MS); //różnica czasu w zboczach (RTOS nie za pomocą HAL2)
       last_edge = now;
 
       /* HIGH->LOW: ON time ended => dot or dash */
       if (prev == LL_GPIO_PIN_SET && cur == LL_GPIO_PIN_RESET)
       {
-        if (dt_ms < (DOT_MS + DASH_MS) / 2U)
+        if (dt_ms < (DOT_MS + DASH_MS) / 2U) //zdakodowanie czy krótki
         {
           if (pat_len < (sizeof(pat) - 1U)) pat[pat_len++] = '.';
         }
         else
         {
-          if (pat_len < (sizeof(pat) - 1U)) pat[pat_len++] = '-';
+          if (pat_len < (sizeof(pat) - 1U)) pat[pat_len++] = '-'; //co gdy długi
         }
         pat[pat_len] = '\0';
       }
-      /* LOW->HIGH: gap ended => if long enough, end of letter/word */
+//wykrywanie czy skończyło się nadawanie
       else if (prev == LL_GPIO_PIN_RESET && cur == LL_GPIO_PIN_SET)
       {
         if (dt_ms >= LETTER_GAP_MS)
         {
           if (pat_len > 0U)
           {
-            char decoded = morse_to_char(pat);
+            char decoded = morse_to_char(pat); //przrób na znak
 
             char out[64];
             snprintf(out, sizeof(out), "pat=%s -> %c\r\n", pat, decoded);
@@ -278,7 +270,7 @@ static void function2(void *pvParameters)
         }
       }
 
-      prev = cur;
+      prev = cur; //zapamiętanie stanu do zbocza
     }
 
     vTaskDelay(pdMS_TO_TICKS(2));
