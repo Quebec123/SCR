@@ -1,0 +1,10 @@
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:877:22:LL_AHB2_GRP1_EnableClock	48	static,ignoring_inline_asm
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:1015:22:LL_AHB2_GRP1_DisableClock	40	static,ignoring_inline_asm
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:1075:22:LL_AHB2_GRP1_ForceReset	16	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:1136:22:LL_AHB2_GRP1_ReleaseReset	16	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1456:22:HAL_RCC_RNG_EnableClock	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1606:22:HAL_RCC_RNG_DisableClock	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:3281:22:HAL_RCC_RNG_Reset	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/hal/mx_rng.c:31:19:mx_rng_init	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/hal/mx_rng.c:51:6:mx_rng_deinit	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/hal/mx_rng.c:60:19:mx_rng_gethandle	4	static
