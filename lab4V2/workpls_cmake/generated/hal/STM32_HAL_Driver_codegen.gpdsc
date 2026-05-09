@@ -383,7 +383,7 @@
       <description>STMicroelectronics HAL ADC Init dependencies</description>
       <require condition="HAL CORE GPIO DMA Init"/>
       <require condition="HAL System Init"/>
-      <require Cclass="Device" Cgroup="STM32 LL" Csub="ADC"/>
+      <require Cclass="Device" Cgroup="STM32 HAL" Csub="ADC"/>
     </condition>
     <condition id="HAL CORE GPIO Init and COMP">
       <description>STMicroelectronics HAL COMP Init dependencies</description>
@@ -406,7 +406,7 @@
       <description>STMicroelectronics HAL I2C Init dependencies</description>
       <require condition="HAL CORE GPIO DMA Init"/>
       <require condition="HAL System Init"/>
-      <require Cclass="Device" Cgroup="STM32 LL" Csub="I2C"/>
+      <require Cclass="Device" Cgroup="STM32 HAL" Csub="I2C"/>
     </condition>
     <condition id="HAL CORE GPIO DMA Init and I3C">
       <description>STMicroelectronics HAL I3C Init dependencies</description>
@@ -460,7 +460,7 @@
     <condition id="HAL CORE Init and RNG">
       <description>STMicroelectronics HAL RNG Init dependencies</description>
       <require condition="CMSIS Core"/>
-      <require Cclass="Device" Cgroup="STM32 LL" Csub="RNG"/>
+      <require Cclass="Device" Cgroup="STM32 HAL" Csub="RNG"/>
     </condition>
     <condition id="HAL CORE DMA Init and AES">
       <description>STMicroelectronics HAL AES Init dependencies</description>
@@ -533,7 +533,7 @@
     <condition id="System files">
       <description>System files for codegen</description>
       <require Cclass="Device" Cgroup="STM32 HAL" Csub="CORTEX"/>
-      <require Cclass="Device" Cgroup="STM32 LL" Csub="EXTI"/>
+      <require Cclass="Device" Cgroup="STM32 HAL" Csub="EXTI"/>
       <require Cclass="Device" Cgroup="STM32 LL" Csub="PWR"/>
       <require Cclass="Device" Cgroup="STM32 HAL" Csub="RCC"/>
     </condition>
@@ -553,11 +553,22 @@
     </condition>
   </conditions>
   <components>
+    <component generator="stm32c5xx_hal_mx2codegen" Cclass="Device" Cgroup="STM32CubeMX2 Config" Csub="ADC"   Cversion="2.0.0" condition="HAL CORE GPIO DMA Init and ADC">
+      <description>TO BE DEFINED</description>
+      <files>
+        <file category="source" name="mx_adc1.c" />
+        <file category="header" name="mx_adc1.h" />
+      </files>
+    </component>
     <component generator="stm32c5xx_hal_mx2codegen" Cclass="Device" Cgroup="STM32CubeMX2 Config" Csub="CORE"   Cversion="2.0.0" condition="HAL Generated code">
       <description>TO BE DEFINED</description>
       <files>
         <file category="header" name="mx_hal_def.h" />
         <file category="header" name="stm32_hal_timebase.h" />
+        <file category="header" name="stm32c5xx_hal_conf.h" />
+        <file category="header" name="stm32c5xx_hal_conf.h" />
+        <file category="header" name="stm32c5xx_hal_conf.h" />
+        <file category="header" name="stm32c5xx_hal_conf.h" />
         <file category="header" name="stm32c5xx_hal_conf.h" />
         <file category="header" name="stm32c5xx_hal_conf.h" />
         <file category="header" name="stm32c5xx_hal_conf.h" />
@@ -587,6 +598,13 @@
         <file category="header" name="mx_gpio_default.h" />
       </files>
     </component>
+    <component generator="stm32c5xx_hal_mx2codegen" Cclass="Device" Cgroup="STM32CubeMX2 Config" Csub="I2C"   Cversion="2.0.0" condition="HAL CORE GPIO DMA Init and I2C">
+      <description>TO BE DEFINED</description>
+      <files>
+        <file category="source" name="mx_i2c1.c" />
+        <file category="header" name="mx_i2c1.h" />
+      </files>
+    </component>
     <component generator="stm32c5xx_hal_mx2codegen" Cclass="Device" Cgroup="STM32CubeMX2 Config" Csub="ICACHE"   Cversion="2.0.0" condition="HAL CORE Init and ICACHE">
       <description>TO BE DEFINED</description>
       <files>
@@ -602,6 +620,13 @@
       <files>
         <file category="source" name="mx_rcc.c" />
         <file category="header" name="mx_rcc.h" />
+      </files>
+    </component>
+    <component generator="stm32c5xx_hal_mx2codegen" Cclass="Device" Cgroup="STM32CubeMX2 Config" Csub="RNG"   Cversion="2.0.0" condition="HAL CORE Init and RNG">
+      <description>TO BE DEFINED</description>
+      <files>
+        <file category="source" name="mx_rng.c" />
+        <file category="header" name="mx_rng.h" />
       </files>
     </component>
     <component generator="stm32c5xx_hal_mx2codegen" Cclass="Device" Cgroup="STM32CubeMX2 Config" Csub="System"   Cversion="2.0.0" condition="HAL System Init">

@@ -9,7 +9,9 @@ include(cmake/target.cmake)
 include(cmake/${TOOLCHAIN_FILE})
 
 project(workpls)
-add_executable(workpls)
+add_executable(workpls
+    generated/middleware/ssd1306.c
+)
 include(cmake/files.cmake)
 include(cmake/flags.cmake)
 include(cmake/components.cmake)

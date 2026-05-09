@@ -49,7 +49,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
       
       The C compiler identification is GNU, found in:
-        C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/CMakeFiles/3.30.8/CompilerIdC/CMakeCCompilerId.o
+        C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/CMakeFiles/3.30.8/CompilerIdC/CMakeCCompilerId.o
       
   -
     kind: "message-v1"
@@ -91,6 +91,6 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
       
       The CXX compiler identification is GNU, found in:
-        C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/CMakeFiles/3.30.8/CompilerIdCXX/CMakeCXXCompilerId.o
+        C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/CMakeFiles/3.30.8/CompilerIdCXX/CMakeCXXCompilerId.o
       
 ...

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/wikto/Desktop/test/workpls_cmake
+# Install script for directory: C:/Users/wikto/Desktop/test/lab1/workpls_cmake
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,42 +39,42 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/arch/cmsis/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/arch/cmsis/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/middleware/freertos/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/middleware/freertos/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/stm32c5xx_dfp/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/stm32c5xx_dfp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/stm32c5xx_drivers/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/stm32c5xx_drivers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/utilities/syscalls/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/utilities/syscalls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/generated/hal/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/generated/hal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/generated/middleware/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/generated/middleware/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/generated/utilities/cmake_install.cmake")
+  include("C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/generated/utilities/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -92,6 +92,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/wikto/Desktop/test/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/wikto/Desktop/test/lab1/workpls_cmake/build/debug_GCC_NUCLEO-C562RE/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

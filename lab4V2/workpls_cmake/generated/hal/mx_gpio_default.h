@@ -47,12 +47,6 @@ extern "C" {
 #define LD2_ACTIVE_STATE                                HAL_GPIO_PIN_SET
 #define LD2_INACTIVE_STATE                              HAL_GPIO_PIN_RESET
 
-#define LD1_PORT                                        HAL_GPIOA
-#define LD1_PIN                                         HAL_GPIO_PIN_5
-#define LD1_INIT_STATE                                  HAL_GPIO_PIN_RESET
-#define LD1_ACTIVE_STATE                                HAL_GPIO_PIN_SET
-#define LD1_INACTIVE_STATE                              HAL_GPIO_PIN_RESET
-
 /* Primary aliases for GPIO PA6 pin */
 #define PA6_PORT                                        HAL_GPIOA
 #define PA6_PIN                                         HAL_GPIO_PIN_6
@@ -61,11 +55,17 @@ extern "C" {
 #define PA6_INACTIVE_STATE                              HAL_GPIO_PIN_RESET
 
 /* Secondary aliases for GPIO PA6 pin */
-#define LD2_PORT                                        HAL_GPIOA
-#define LD2_PIN                                         HAL_GPIO_PIN_6
-#define LD2_INIT_STATE                                  HAL_GPIO_PIN_RESET
-#define LD2_ACTIVE_STATE                                HAL_GPIO_PIN_SET
-#define LD2_INACTIVE_STATE                              HAL_GPIO_PIN_RESET
+#define LD1_PORT                                        HAL_GPIOA
+#define LD1_PIN                                         HAL_GPIO_PIN_6
+#define LD1_INIT_STATE                                  HAL_GPIO_PIN_RESET
+#define LD1_ACTIVE_STATE                                HAL_GPIO_PIN_SET
+#define LD1_INACTIVE_STATE                              HAL_GPIO_PIN_RESET
+
+#define LD1_PORT                                        HAL_GPIOA
+#define LD1_PIN                                         HAL_GPIO_PIN_6
+#define LD1_INIT_STATE                                  HAL_GPIO_PIN_RESET
+#define LD1_ACTIVE_STATE                                HAL_GPIO_PIN_SET
+#define LD1_INACTIVE_STATE                              HAL_GPIO_PIN_RESET
 
 /* Primary aliases for GPIO PA7 pin */
 #define PA7_PORT                                        HAL_GPIOA
@@ -107,6 +107,17 @@ extern "C" {
 #define LD4_ACTIVE_STATE                                HAL_GPIO_PIN_SET
 #define LD4_INACTIVE_STATE                              HAL_GPIO_PIN_RESET
 
+/* Primary aliases for GPIO PC13 pin */
+#define PC13_PORT                                       HAL_GPIOC
+#define PC13_PIN                                        HAL_GPIO_PIN_13
+
+/* Secondary aliases for GPIO PC13 pin */
+#define B1_PORT                                         HAL_GPIOC
+#define B1_PIN                                          HAL_GPIO_PIN_13
+
+#define B1_PORT                                         HAL_GPIOC
+#define B1_PIN                                          HAL_GPIO_PIN_13
+
 /* Exported macros -----------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
@@ -125,6 +136,8 @@ system_status_t mx_gpio_default_init(void);
   * @brief  De-initialize gpio_default instance.
   */
 system_status_t mx_gpio_default_deinit(void);
+
+hal_exti_handle_t *mx_gpio_default_exti13_gethandle(void);
 
 #ifdef __cplusplus
 }

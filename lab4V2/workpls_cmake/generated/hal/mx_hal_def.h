@@ -27,11 +27,14 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "mx_def.h"
 #include "stm32_hal.h"
+#include "mx_adc1.h"
 #include "mx_cortex_mpu.h"
 #include "mx_cortex_nvic.h"
 #include "mx_gpio_default.h"
+#include "mx_i2c1.h"
 #include "mx_icache.h"
 #include "mx_rcc.h"
+#include "mx_rng.h"
 #include "mx_tim2.h"
 #include "mx_usart2.h"
 
@@ -41,6 +44,12 @@ extern "C" {
 /* Exported macros -----------------------------------------------------------*/
 
 /* ########### Aliases to initialization functions ########### */
+
+  /* *************************************************************
+    ADC1: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_adc1_init
+    ************************************************************* */
 
   /* *************************************************************
     Cortex_MPU: No software label has been defined for this peripheral instance
@@ -61,6 +70,12 @@ extern "C" {
     ************************************************************* */
 
   /* *************************************************************
+    I2C1: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_i2c1_i2c_init
+    ************************************************************* */
+
+  /* *************************************************************
     ICACHE: No software label has been defined for this peripheral instance
       in the STM32CubeMX2 configuration panel.
       As a result, no aliases are generated for mx_icache_init
@@ -70,6 +85,12 @@ extern "C" {
     RCC: No software label has been defined for this peripheral instance
       in the STM32CubeMX2 configuration panel.
       As a result, no aliases are generated for mx_rcc_init
+    ************************************************************* */
+
+  /* *************************************************************
+    RNG: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_rng_init
     ************************************************************* */
 
   /* *************************************************************
@@ -87,6 +108,12 @@ extern "C" {
 /* ########################################################### */
 
 /* ########### Aliases to De-Initialization functions ########### */
+
+  /* *************************************************************
+    ADC1: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_adc1_deinit
+    ************************************************************* */
 
   /* *************************************************************
     Cortex_MPU: No software label has been defined for this peripheral instance
@@ -107,9 +134,21 @@ extern "C" {
     ************************************************************* */
 
   /* *************************************************************
+    I2C1: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_i2c1_i2c_deinit
+    ************************************************************* */
+
+  /* *************************************************************
     ICACHE: No software label has been defined for this peripheral instance
       in the STM32CubeMX2 configuration panel.
       As a result, no aliases are generated for mx_icache_deinit
+    ************************************************************* */
+
+  /* *************************************************************
+    RNG: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_rng_deinit
     ************************************************************* */
 
   /* *************************************************************
@@ -129,9 +168,33 @@ extern "C" {
 /* ########### Aliases to get HAL handle functions ########### */
 
   /* *************************************************************
+    ADC1: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_adc1_gethandle
+    ************************************************************* */
+
+  /* *************************************************************
+    gpio_default / EXTI13: No EXTI software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_gpio_default_exti13_gethandle
+    ************************************************************* */
+
+  /* *************************************************************
+    I2C1: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_i2c1_i2c_gethandle
+    ************************************************************* */
+
+  /* *************************************************************
     ICACHE: No software label has been defined for this peripheral instance
       in the STM32CubeMX2 configuration panel.
       As a result, no aliases are generated for mx_icache_gethandle
+    ************************************************************* */
+
+  /* *************************************************************
+    RNG: No software label has been defined for this peripheral instance
+      in the STM32CubeMX2 configuration panel.
+      As a result, no aliases are generated for mx_rng_gethandle
     ************************************************************* */
 
   /* *************************************************************

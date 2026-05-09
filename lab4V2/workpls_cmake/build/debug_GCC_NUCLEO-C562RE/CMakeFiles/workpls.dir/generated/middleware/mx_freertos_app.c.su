@@ -1,0 +1,6 @@
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_adc.h:2123:25:LL_ADC_CALC_TEMPERATURE	32	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:36:13:print_uart	24	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:42:13:task_a_sensor	128	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:89:13:task_pi	192	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:145:13:task_b_calc	176	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:173:9:app_synctasks_init	16	static

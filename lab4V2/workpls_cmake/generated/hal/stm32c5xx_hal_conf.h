@@ -100,7 +100,7 @@ extern "C" {
   * @{
   */
 /* ########################## HAL_ADC Config #################################### */
-#define USE_HAL_ADC_MODULE                      0U
+#define USE_HAL_ADC_MODULE                      1U
 #define USE_HAL_ADC_CLK_ENABLE_MODEL            HAL_CLK_ENABLE_NO
 #define USE_HAL_ADC_REGISTER_CALLBACKS          0U
 #define USE_HAL_ADC_USER_DATA                   0U
@@ -261,7 +261,7 @@ extern "C" {
   * @{
   */
 /* ########################## HAL_EXTI Config ################################### */
-#define USE_HAL_EXTI_MODULE                     0U
+#define USE_HAL_EXTI_MODULE                     1U
 #define USE_HAL_EXTI_REGISTER_CALLBACKS         0U
 #define USE_HAL_EXTI_USER_DATA                  0U
 /**
@@ -351,7 +351,7 @@ extern "C" {
   * @{
   */
 /* ########################## HAL_I2C Config #################################### */
-#define USE_HAL_I2C_MODULE                      0U
+#define USE_HAL_I2C_MODULE                      1U
 #define USE_HAL_I2C_CLK_ENABLE_MODEL            HAL_CLK_ENABLE_NO
 #define USE_HAL_I2C_REGISTER_CALLBACKS          0U
 #define USE_HAL_I2C_USER_DATA                   0U
@@ -513,7 +513,7 @@ extern "C" {
   * @{
   */
 /* ########################## HAL_RNG Config #################################### */
-#define USE_HAL_RNG_MODULE                      0U
+#define USE_HAL_RNG_MODULE                      1U
 #define USE_HAL_RNG_CLK_ENABLE_MODEL            HAL_CLK_ENABLE_NO
 #define USE_HAL_RNG_REGISTER_CALLBACKS          0U
 #define USE_HAL_RNG_USER_DATA                   0U

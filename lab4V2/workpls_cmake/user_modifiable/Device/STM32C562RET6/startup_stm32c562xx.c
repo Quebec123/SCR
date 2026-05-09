@@ -254,8 +254,7 @@ const VECTOR_TABLE_Type __VECTOR_TABLE[] __VECTOR_TABLE_ATTRIBUTE =
   * @param  None
   * @retval None
   */
-__WEAK __NO_RETURN void Reset_Handler(void)
-{
+__WEAK __NO_RETURN void Reset_Handler(void){
   __set_PSP((uint32_t)(&__INITIAL_SP));
 
   __set_MSPLIM((uint32_t)(&__STACK_LIMIT));

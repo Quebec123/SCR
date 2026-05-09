@@ -23,6 +23,7 @@
 /* Private define ------------------------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 /* Exported variables by reference -------------------------------------------*/
+static hal_exti_handle_t hEXTI13;
 
 /******************************************************************************/
 /* Exported functions for GPIO in HAL layer (SW instance MyGPIO_1) */
@@ -38,8 +39,8 @@ system_status_t mx_gpio_default_init(void)
   /*
     GPIO pin labels :
     PA5   ---------> PA5, LD2, LD1
-    PA6   ---------> PA6, LD2
-    PA7   ---------> PA7, LD3, LD3
+    PA6   ---------> PA6, LD1, LD3
+    PA7   ---------> PA7, LD3
     */
   /* Configure PA5, PA6, PA7 GPIO pins in output mode */
   gpio_config.mode            = HAL_GPIO_MODE_OUTPUT;
@@ -67,16 +68,46 @@ system_status_t mx_gpio_default_init(void)
     return SYSTEM_PERIPHERAL_ERROR;
   }
 
+  /*
+    GPIO pin labels :
+    PC13  ---------> PC13, B1, B1
+    */
+  /* Configure PC13 GPIO pin in input mode */
+  gpio_config.mode            = HAL_GPIO_MODE_INPUT;
+  gpio_config.pull            = HAL_GPIO_PULL_DOWN;
+  if (HAL_GPIO_Init(PC13_PORT, PC13_PIN, &gpio_config) != HAL_OK)
+  {
+    return SYSTEM_PERIPHERAL_ERROR;
+  }
+
+  hal_exti_config_t exti_config;
+
+  /* Initialize the EXTI for line 13 */
+  HAL_EXTI_Init(&hEXTI13, HAL_EXTI_LINE_13);
+
+  /* Set the trigger as RISING for the GPIOC */
+  exti_config.trigger   = HAL_EXTI_TRIGGER_RISING;
+  exti_config.gpio_port = HAL_EXTI_GPIOC;
+  HAL_EXTI_SetConfig(&hEXTI13, &exti_config);
+
   return SYSTEM_OK;
 }
 
 system_status_t mx_gpio_default_deinit(void)
 {
+  /* De-initialize the EXTI for GPIOC line13 */
+  HAL_EXTI_DeInit(&hEXTI13);
+
   /* De-initialize pins of GPIOA port */
   HAL_GPIO_DeInit(HAL_GPIOA, HAL_GPIO_PIN_5 | HAL_GPIO_PIN_6 | HAL_GPIO_PIN_7);
 
   /* De-initialize pins of GPIOC port */
-  HAL_GPIO_DeInit(HAL_GPIOC, HAL_GPIO_PIN_6);
+  HAL_GPIO_DeInit(HAL_GPIOC, HAL_GPIO_PIN_6 | HAL_GPIO_PIN_13);
 
   return SYSTEM_OK;
+}
+
+hal_exti_handle_t *mx_gpio_default_exti13_gethandle(void)
+{
+  return &hEXTI13;
 }
