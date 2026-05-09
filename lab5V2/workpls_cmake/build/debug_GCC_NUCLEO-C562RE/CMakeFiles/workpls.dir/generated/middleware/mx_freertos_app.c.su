@@ -1,0 +1,5 @@
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:35:13:uart_puts	24	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:44:13:blink_led	32	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:68:9:app_synctasks_init	40	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:163:13:display_task	64	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/mx_freertos_app.c:196:13:sensor_task	16	static

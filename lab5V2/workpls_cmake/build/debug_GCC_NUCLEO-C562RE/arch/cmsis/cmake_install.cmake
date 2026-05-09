@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/wikto/Desktop/test/workpls_cmake/arch/cmsis
+# Install script for directory: C:/Users/wikto/Desktop/test/lab1/workpls_cmake/arch/cmsis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

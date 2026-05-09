@@ -95,7 +95,28 @@ system_status_t mx_system_init(void)
   */
   /*
   */
+  if (mx_adc1_init() == NULL)
+  {
+    return SYSTEM_PERIPHERAL_ERROR;
+  }
+
+  /*
+  */
   if (mx_gpio_default_init() != SYSTEM_OK)
+  {
+    return SYSTEM_PERIPHERAL_ERROR;
+  }
+
+  /*
+  */
+  if (mx_i2c1_i2c_init() == NULL)
+  {
+    return SYSTEM_PERIPHERAL_ERROR;
+  }
+
+  /*
+  */
+  if (mx_rng_init() == NULL)
   {
     return SYSTEM_PERIPHERAL_ERROR;
   }

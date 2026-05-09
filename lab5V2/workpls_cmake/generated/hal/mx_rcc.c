@@ -105,7 +105,29 @@ system_status_t mx_rcc_peripherals_clock_config(void)
 {
   /* Peripherals using PCLK1 (144 MHz):
     USART2
+    I2C1
   */
+
+  /* Peripherals using HSIDIV3 (48 MHz):
+    RNG
+  */
+  if (HAL_RCC_HSIDIV3_Enable() != HAL_OK)
+  {
+    return SYSTEM_CLOCK_ERROR;
+  }
+
+  /* Peripherals using PSIS (144 MHz):
+    ADC1
+  */
+  /* PSIS already enabled inside mx_rcc_init() */
+
+  /* Peripherals using ADC_DAC_DIV (36 MHz):
+    ADC1
+  */
+  if (HAL_RCC_ADCDAC_SetKernelClkPrescaler(HAL_RCC_ADCDAC_PRESCALER4) != HAL_OK)
+  {
+    return SYSTEM_CLOCK_ERROR;
+  }
 
   return SYSTEM_OK;
 }

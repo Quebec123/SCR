@@ -1,5 +1,5 @@
-C:/Users/wikto/Desktop/test/workpls_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:877:22:LL_AHB2_GRP1_EnableClock	48	static,ignoring_inline_asm
-C:/Users/wikto/Desktop/test/workpls_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1354:22:HAL_RCC_GPIOA_EnableClock	8	static
-C:/Users/wikto/Desktop/test/workpls_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1370:22:HAL_RCC_GPIOC_EnableClock	8	static
-C:/Users/wikto/Desktop/test/workpls_cmake/generated/hal/mx_gpio_default.c:30:17:mx_gpio_default_init	16	static
-C:/Users/wikto/Desktop/test/workpls_cmake/generated/hal/mx_gpio_default.c:73:17:mx_gpio_default_deinit	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/ll/stm32c5xx_ll_bus.h:877:22:LL_AHB2_GRP1_EnableClock	48	static,ignoring_inline_asm
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1354:22:HAL_RCC_GPIOA_EnableClock	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/stm32c5xx_drivers/hal/stm32c5xx_hal_rcc.h:1370:22:HAL_RCC_GPIOC_EnableClock	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/hal/mx_gpio_default.c:30:17:mx_gpio_default_init	16	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/hal/mx_gpio_default.c:85:17:mx_gpio_default_deinit	8	static

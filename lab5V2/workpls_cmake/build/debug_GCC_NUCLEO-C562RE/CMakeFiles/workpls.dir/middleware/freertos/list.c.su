@@ -1,5 +1,5 @@
-C:/Users/wikto/Desktop/test/workpls_cmake/middleware/freertos/list.c:49:6:vListInitialise	16	static
-C:/Users/wikto/Desktop/test/workpls_cmake/middleware/freertos/list.c:89:6:vListInitialiseItem	16	static
-C:/Users/wikto/Desktop/test/workpls_cmake/middleware/freertos/list.c:105:6:vListInsertEnd	24	static
-C:/Users/wikto/Desktop/test/workpls_cmake/middleware/freertos/list.c:139:6:vListInsert	24	static
-C:/Users/wikto/Desktop/test/workpls_cmake/middleware/freertos/list.c:217:13:uxListRemove	24	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/middleware/freertos/list.c:49:6:vListInitialise	16	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/middleware/freertos/list.c:89:6:vListInitialiseItem	16	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/middleware/freertos/list.c:105:6:vListInsertEnd	24	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/middleware/freertos/list.c:139:6:vListInsert	24	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/middleware/freertos/list.c:217:13:uxListRemove	24	static

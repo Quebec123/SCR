@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/wikto/Desktop/test/workpls_cmake/generated/middleware
+# Install script for directory: C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

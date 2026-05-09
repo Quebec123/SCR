@@ -26,6 +26,14 @@ extern "C" {
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 
+/* ########################## VDD Value #######################################*/
+/**
+  * @brief VDD Value.
+  */
+#if !defined  (VDD_VALUE)
+#define  VDD_VALUE             3300UL /*!< Value of VDD in mV */
+#endif /* VDD_VALUE */
+
 /* ########################## Oscillator Values adaptation ####################*/
 /**
   * @brief Adjust the value of External High Speed oscillator (HSE) used in your application.

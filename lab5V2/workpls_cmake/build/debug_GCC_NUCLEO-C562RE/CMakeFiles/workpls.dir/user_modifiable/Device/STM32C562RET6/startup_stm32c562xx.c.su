@@ -1,4 +1,4 @@
-C:/Users/wikto/Desktop/test/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:257:25:Reset_Handler	40	static,ignoring_inline_asm
-C:/Users/wikto/Desktop/test/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:278:13:HardFault_Handler	4	static
-C:/Users/wikto/Desktop/test/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:289:6:Default_IRQHandler	8	static
-C:/Users/wikto/Desktop/test/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:300:13:Default_IRQHandler_Hook	4	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:257:25:Reset_Handler	40	static,ignoring_inline_asm
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:278:13:HardFault_Handler	4	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:289:6:Default_IRQHandler	8	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/user_modifiable/Device/STM32C562RET6/startup_stm32c562xx.c:300:13:Default_IRQHandler_Hook	4	static

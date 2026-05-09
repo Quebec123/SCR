@@ -1,0 +1,13 @@
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:76:21:ssd1306_writeCmdSeq	64	dynamic
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:85:21:ssd1306_writeData	64	dynamic
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:96:9:ssd1306_init	56	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:134:6:ssd1306_clear	16	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:143:14:ssd1306_update	32	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:170:6:ssd1306_drawPixel	32	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:187:6:ssd1306_drawLine	40	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:218:6:ssd1306_drawRect	40	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:229:6:ssd1306_fillRect	40	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:238:6:ssd1306_drawCircle	32	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:268:6:ssd1306_fillCircle	32	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:283:6:ssd1306_drawChar	40	static
+C:/Users/wikto/Desktop/test/lab1/workpls_cmake/generated/middleware/ssd1306.c:305:6:ssd1306_drawString	32	static
